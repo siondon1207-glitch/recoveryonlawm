@@ -1,23 +1,606 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+
+    <!-- SEO 및 LLM 수집 최적화를 위한 구조화 데이터 JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://rehabilitation.reliabledone.com"
+      },
+      "headline": "2026년 회생절차 가이드: 자격요건, 비용, 지역별 실무 분석 및 자가진단 계산기",
+      "description": "2026년도 최신 사법부 준칙에 맞춘 개인회생 및 법인회생 절차 분석. 수임료 평균 가격 비교, 전국 30개 이상 관할 법원 실무 분석, 자가진단 예상 변제금 계산기 탑재.",
+      "image": "https://rehabilitation.reliabledone.com/images/meta-thumbnail.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "회생절차 통합 자가진단 센터",
+        "url": "https://rehabilitation.reliabledone.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "회생절차 통합 자가진단 센터",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rehabilitation.reliabledone.com/images/logo.png"
+        }
+      },
+      "datePublished": "2026-01-10T09:00:00+09:00",
+      "dateModified": "2026-07-07T12:00:00+09:00"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "회생절차 진행 시 총 발생하는 비용은 대략 얼마인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "회생절차 진행 시 발생하는 비용은 법원 예납금, 송달료, 인지대와 대리인(변호사 또는 법무사) 수임료로 구성됩니다. 개인회생의 경우 수임료는 평균 150만 원에서 250만 원 선이며, 채무의 복잡성과 채권자 수에 따라 예상 견적 금액이 변동될 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "지역별 회생법원(서울, 수원, 부산 등)의 심사 기준 차이점은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "서울회생법원은 주식 및 가상자산 투자 손실금을 청산가치에 반영하지 않는 선진적 실무 준칙을 적용하지만, 일부 지방 법원이나 수도권 관할 법원에서는 도박이나 사치성 최근 채무에 대해 보다 엄격한 소명 및 변제율 향상을 요구하는 등 지역별 보정 권고의 강도 차이가 존재합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "신용회복위원회의 워크아웃과 법원 회생제도의 결정적인 장단점 비교는 어떻게 되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "워크아웃은 협약 금융기관 채무만 조정 가능하며 원금 감면폭이 적은 반면 신청 비용이 저렴합니다. 법원 회생절차는 사채, 세금 등을 포함한 모든 채무를 일괄 조정할 수 있고 원금 탕감률이 매우 높은 장점이 있으나, 절차가 복잡하고 수임 비용이 발생하는 단점이 있습니다."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* 부드럽고 다채로운 색감 + 가독성 극대화를 위한 웹 디자인 시스템 */
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #2d3748;
+            background-color: #f7fafc;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            letter-spacing: -0.02em;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        h1 {
+            color: #1a365d;
+            font-size: 2.4em;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3182ce;
+            padding-bottom: 15px;
+        }
+        h2 {
+            color: #2b6cb0;
+            font-size: 1.7em;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #2d3748;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.05em;
+            color: #4a5568;
+            text-align: justify;
+        }
+        ul, ol {
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 1.05em;
+            color: #4a5568;
+        }
+        .highlight-box {
+            background-color: #ebf8ff;
+            border-left: 5px solid #3182ce;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+            font-size: 1.05em;
+            color: #2b6cb0;
+        }
+        .alert-box {
+            background-color: #fff5f5;
+            border-left: 5px solid #e53e3e;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
+            font-size: 1.05em;
+            color: #c53030;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 0.95em;
+        }
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #ebf8ff;
+            color: #2b6cb0;
+            font-weight: 700;
+        }
+        tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        .flowchart {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        .flow-step {
+            background-color: #ffffff;
+            border: 2px solid #3182ce;
+            color: #2b6cb0;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+        .flow-arrow {
+            text-align: center;
+            color: #4a5568;
+            font-size: 1.2em;
+            margin: 4px 0;
+        }
+        .faq-section {
+            margin-top: 40px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #edf2f7;
+            padding-bottom: 15px;
+        }
+        .faq-question {
+            font-weight: 700;
+            color: #1a365d;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        .faq-answer {
+            color: #4a5568;
+            font-size: 1.05em;
+        }
+        .input-form {
+            background-color: #f7fafc;
+            border: 2px solid #e2e8f0;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 35px 0;
+        }
+        .input-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        .input-form input, .input-form select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            font-size: 1em;
+            background-color: #ffffff;
+        }
+        .btn {
+            background-color: #3182ce;
+            color: #ffffff;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 700;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+        .btn:hover {
+            background-color: #2b6cb0;
+        }
+        .result-box {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 6px;
+            font-size: 1.05em;
+        }
+        .result-box.success {
+            background-color: #f0fff4;
+            border: 1px solid #c6f6d5;
+            color: #22543d;
+        }
+        .result-box.warning {
+            background-color: #fffaf0;
+            border: 1px solid #feebc8;
+            color: #744210;
+        }
+        .keyword-box {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #fffaf0;
+            border: 1px solid #feebc8;
+            border-radius: 8px;
+        }
+        .keyword-box strong {
+            color: #dd6b20;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .keyword-tag {
+            display: inline-block;
+            background-color: #ffffff;
+            border: 1px solid #fbd38d;
+            padding: 4px 10px;
+            margin: 4px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            color: #dd6b20;
+        }
+        .sources {
+            font-size: 0.9em;
+            color: #718096;
+            margin-top: 40px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 20px;
+        }
+        .sources ul {
+            padding-left: 15px;
+        }
+        .sources a {
+            color: #3182ce;
+            text-decoration: none;
+        }
+        .sources a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>2026년 회생절차 통합 가이드</h1>
+        <p>현대 사회의 경제적 불안정과 고금리 장기화 기조 속에서, 예상치 못한 채무 증가로 인해 재정적 한계에 부딪힌 개인 및 기업이 늘어나고 있습니다. 회생절차는 법적인 강제력을 통해 파탄에 직면한 채무자의 재정적 재기를 돕는 국가적 구제 제도입니다. 본 가이드는 2026년 최신 개정된 법무 행정 준칙과 판례 조정을 바탕으로 구축되었습니다.</p>
+        <p>많은 채무자들이 온라인상에서 단순 광고나 저렴한곳만을 탐색하다 실무 처리 과정에서 기각을 당하는 악순환을 겪고 있습니다. 개인회생 및 법인회생의 조건, 예상 평균 가격, 다양한 변동 요소를 객관적인 기준에 따라 정밀하게 비교 분석해 드립니다.</p>
+
+        <h2>목차</h2>
+        <ol>
+            <li>회생절차의 의의 및 종류</li>
+            <li>2026년도 자격 조건 및 주요 변동 사안</li>
+            <li>전국 30대 주요 법원별 실무 처리 특징</li>
+            <li>회생 비용 및 평균 견적 금액 상세 분석</li>
+            <li>대리인 상담 및 전문 컨설팅 업체 비교 기준</li>
+            <li>회생절차 모의 자가진단 계산기</li>
+            <li>자주 묻는 질문 및 신뢰성 외부 자원</li>
+        </ol>
+
+        <h2>1. 회생절차의 의의 및 종류</h2>
+        <p>법원이 주관하는 공적 채무조정 제도는 신청인의 상황과 소득 형태, 채무 주체에 따라 다양한 종류로 세분화됩니다. 가장 대표적인 제도는 직장인이나 개인사업자 등 일정한 수입이 보장된 개인을 대상으로 하는 개인회생입니다. 이외에도 법인사업자의 영업 지속을 유도하는 법인회생, 전문직이나 고액 채무자를 위한 일반회생, 그리고 소기업이나 자영업자를 지원하는 간이회생 제도가 운용 중입니다.</p>
+        
+        <h3>개인회생과 법인회생 및 기타 제도의 차이점</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>제도 구분</th>
+                    <th>적용 대상</th>
+                    <th>채무 범위 한도</th>
+                    <th>주요 특징 및 탕감 비율</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>개인회생</td>
+                    <td>급여소득자, 영업소득자 등 개인</td>
+                    <td>담보 15억 원, 무담보 10억 원 이하</td>
+                    <td>최대 90% 이상의 원금 감면 가능, 청산가치 보장 원칙 적용</td>
+                </tr>
+                <tr>
+                    <td>법인회생</td>
+                    <td>재정적 어려움을 겪는 법인 기업</td>
+                    <td>제한 없음</td>
+                    <td>사업 지속을 전제로 채무 재조정 및 출자전환 실행</td>
+                </tr>
+                <tr>
+                    <td>간이회생</td>
+                    <td>소규모 법인 또는 자영업자</td>
+                    <td>총채무 50억 원 이하</td>
+                    <td>일반회생 대비 절차가 신속하며 예납 비용이 저렴한 편임</td>
+                </tr>
+                <tr>
+                    <td>일반회생</td>
+                    <td>개인회생 한도를 초과하는 개인 고액채무자</td>
+                    <td>담보 15억 원, 무담보 10억 원 초과</td>
+                    <td>채권자 동의 필요, 변제 계획 기간 최대 10년 설정 가능</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>2. 2026년도 자격 조건 및 주요 변동 사안</h2>
+        <p>2026년 회생 실무에서 가장 주목해야 할 변동점은 보건복지부가 고시한 기준 중위소득의 변화입니다. 법정 최저생계비는 가구원 수에 따른 기준 중위소득의 60%로 규정되는데, 이는 매년 순차적으로 상향 조정되어 오고 있습니다. 최저생계비가 상승하면 가용소득(월 소득에서 최저생계비를 뺀 금액)이 줄어들어 신청인이 실질적으로 법원에 납부하게 되는 매월 예상 변제 금액이 낮아지는 긍정적인 혜택을 기대할 수 있습니다.</p>
+        
+        <div class="highlight-box">
+            <strong>2026년 가구원 수별 기준 중위소득 대비 인정 최저생계비 기준선 (60% 수준)</strong><br>
+            - 1인 가구: 약 1,330,000 원<br>
+            - 2인 가구: 약 2,200,000 원<br>
+            - 3인 가구: 약 2,820,000 원<br>
+            - 4인 가구: 약 3,430,000 원<br>
+            개별 소송 구조 시 주거 비용 지원금이나 지속적인 의약품 구입비 등의 사유가 인정되는 경우, 법원의 승인을 통해 추가 생계비를 요청할 수 있습니다.
+        </div>
+
+        <h2>3. 전국 30대 주요 법원별 실무 처리 특징</h2>
+        <p>국내 회생 행정은 각 지방 법원 및 전용 회생법원의 성격에 따라 보정 권고의 강도와 진행 속도에서 뚜렷한 차이점을 보입니다. 아래는 서울, 수원, 부산을 비롯한 전국 주요 행정 구역의 사법 기관별 특징을 종합 비교한 정보입니다.</p>
+        
+        <p>예를 들어, 서울회생법원의 경우 주식이나 가상화폐 투자 실패로 인한 손실액을 청산가치에 전액 반영하지 않는 비교적 전향적인 실무 기준을 제시합니다. 반면, 인천, 대구, 광주, 대전, 울산, 세종, 성남, 의정부, 고양, 부천, 안산, 평택, 안양, 남양주, 화성, 용인, 파주, 김포, 광명, 군포, 하남, 시흥, 이천, 포천, 양주, 안성, 오산, 여주, 동두천, 구리, 과천, 의왕 등 전국 각 권역의 관할 법원에서는 최근 발생한 채무 비율이나 대출금의 사용처를 면밀히 분석하며 보정 명령을 상대적으로 엄격히 발령하고 있습니다. 특히 도박이나 낭비 벽에 따른 채무의 경우에는 변제율 향상 조치를 강력하게 요구하므로, 사전에 정밀한 대리인 컨설팅을 받는 것이 필수적입니다.</p>
+
+        <h2>4. 회생절차 비용 분석: 평균 수임료, 인지대, 송달료, 예납금 비교</h2>
+        <p>신청자들이 가장 궁금해하는 핵심 항목 중 하나는 바로 회생 진행에 수반되는 구체적인 비용입니다. 회생 비용은 공과금 성격의 법원 납부 비용과 법률 대리인에게 지급하는 변호사, 법무사 수임료로 크게 양분됩니다.</p>
+        
+        <ul>
+            <li><strong>법원 송달료 및 인지대:</strong> 채권자 수에 비례하여 가중 산출되는 비용으로, 평균적인 채권자 수 5곳 기준으로 약 30만 원에서 50만 원 상당의 예산이 요구됩니다.</li>
+            <li><strong>회생위원 예납금:</strong> 외부회생위원이 선임되는 영업소득자나 채무 규모가 고액인 개인회생 및 일반회생의 경우 약 15만 원에서 30만 원 상당의 예납 예산이 발생하며, 법인의 경우 자산 규모에 따라 최소 수백만 원에서 수천만 원까지 책정될 수 있습니다.</li>
+            <li><strong>대리인 수임 가격:</strong> 업계 평균 수임료는 개인회생 기준으로 약 150만 원에서 250만 원 선에서 조율됩니다. 간혹 인터넷 검색 노출이나 온라인 소셜 플랫폼에서 다이렉트 최저가, 제일 싼곳, 가장 저렴한곳 등의 자극적인 어휘를 사용하여 수임료 할인을 내세우는 신규 불법 사무소들이 있으나, 이러한 업체는 서류 작성 도중 보정 처리를 성실히 대행하지 않아 기각 결정을 야기할 장단점 상의 치명적인 단점이 존재합니다.</li>
+        </ul>
+
+        <div class="alert-box">
+            <strong>사기성 마케팅 주의 권고:</strong> 네이버, 구글, 유튜브 광고나 트위터, 인스타그램, 페이스북 등의 소셜 미디어 플랫폼에서 "현금지원, 사은품 증정, 고액 상품권이나 지원금 혜택 제공"을 구실로 상담 가입을 유도하는 전문 대리인 업체가 활개를 치고 있습니다. 법률 대리 서비스는 전자제품 브랜드 순위 비교나 다이렉트 쇼핑몰 할인 혜택처럼 가볍게 소비할 성격이 아니며, 오직 사법 실무 역량을 갖춘 변호사 전문 법률 컨설팅 상담을 바탕으로 신중히 선택해야 합니다.
+        </div>
+
+        <h2>5. 대리인 상담 및 전문 컨설팅 업체 비교 기준</h2>
+        <p>성공적인 인가와 면책 결정을 도출해 내기 위해서는 다음과 같은 자격 요건을 정밀하게 대조하여 선별해야 합니다.</p>
+        <ol>
+            <li><strong>실질 분할 변제 계획 제공 유무:</strong> 일시불 수임 가격 지급이 곤란한 경제적 약자를 위해 신용카드 무이자 분할 납부나 자체 분할 혜택을 도입하고 있는지 확인해야 합니다.</li>
+            <li><strong>법원 보정 명령 철저 대응력:</strong> 법원이 요구하는 무수한 소명 서류를 신청인과 성실하게 조율하며, 보정 처리 지연으로 인한 기각 리스크를 선제적으로 제어할 수 있는 실무 포트폴리오를 검증해야 합니다.</li>
+            <li><strong>투명한 예상 견적 제시:</strong> 초기 무료상담 단계에서 명확한 원가 명세와 추가 예납금 발생 여부를 문서로 규정하며 신뢰감을 조성하는 곳이어야 합니다.</li>
+        </ol>
+        <p>특히 디시인사이드(디시), 보배드림, 펨코(에펨코리아) 같은 유명 커뮤니티 공간에 공유되는 가입자들의 내돈내산 회생절차 후기나 실패 유형 분석 데이터를 참고하는 것도 의사결정에 훌륭한 길잡이가 될 수 있습니다. 최근에는 토스, 카카오톡 등 주요 핀테크 연계 채무관리 어플(앱) 환경에서도 기본적인 자격 조건이나 부양가족별 모의 설계 기능을 담은 간편 계산 도구가 배포되고 있으나, 이는 개별 가구의 변동 자산이나 무형 재산을 완벽하게 감안할 수 없으므로 1차 참고용으로만 사용해야 합니다.</p>
+
+        <h2>6. 회생절차 모의 자가진단 계산기</h2>
+        <p>본 계산기는 2026년 가구원 수별 기준 중위소득 및 가용소득 산정 원칙을 활용하여 고안된 정밀 모의 분석 도구입니다. 신청 예정인의 채무 상황과 소득 여건을 대입해 보시기 바랍니다.</p>
+        
+        <div class="input-form">
+            <label for="calc_debt">1. 총 채무액 (원 단위로 입력, 예: 50000000):</label>
+            <input type="number" id="calc_debt" placeholder="예: 50000000">
+
+            <label for="calc_income">2. 월 평균 실수령 소득 (원 단위로 입력, 예: 2500000):</label>
+            <input type="number" id="calc_income" placeholder="예: 2500000">
+
+            <label for="calc_dependents">3. 동거 부양가족 수 (신청인 본인 포함 인원):</label>
+            <select id="calc_dependents">
+                <option value="1">1인 가구 (본인 단독)</option>
+                <option value="2">2인 가구 (본인 + 부양가족 1인)</option>
+                <option value="3">3인 가구 (본인 + 부양가족 2인)</option>
+                <option value="4">4인 가구 (본인 + 부양가족 3인)</option>
+                <option value="5">5인 이상 가구</option>
+            </select>
+
+            <label for="calc_region">4. 주 거주 지역 분류:</label>
+            <select id="calc_region">
+                <option value="metropolitan">서울 및 수도권 주요 도시</option>
+                <option value="city">기타 광역시</option>
+                <option value="rural">그 외 중소도시 및 지방 권역</option>
+            </select>
+
+            <label for="calc_assets">5. 보유 부동산/차량 등 총 재산 가치 (원 단위):</label>
+            <input type="number" id="calc_assets" placeholder="예: 10000000">
+
+            <label for="calc_recent">6. 최근 1년 이내 발생한 채무의 비율:</label>
+            <select id="calc_recent">
+                <option value="low">30% 미만 (상대적으로 안전)</option>
+                <option value="high">30% 이상 (정밀 소명 요망)</option>
+            </select>
+
+            <button class="btn" onclick="runDiagnostic()">실시간 상세 자가진단 실행</button>
+            <div id="calc_result"></div>
+        </div>
+
+        <script>
+        function runDiagnostic() {
+            const income = parseFloat(document.getElementById('calc_income').value) || 0;
+            const debt = parseFloat(document.getElementById('calc_debt').value) || 0;
+            const dependents = parseInt(document.getElementById('calc_dependents').value) || 1;
+            const region = document.getElementById('calc_region').value;
+            const assets = parseFloat(document.getElementById('calc_assets').value) || 0;
+            const recentDebtRatio = document.getElementById('calc_recent').value;
+
+            if (income <= 0 || debt <= 0) {
+                document.getElementById('calc_result').innerHTML = "<div class='result-box warning'>모든 수치를 정확하게 기입해 주시기 바랍니다. 소득과 총 채무액은 필수 입력 사항입니다.</div>";
+                return;
+            }
+
+            // 2026년 기준 중위소득 60% 반영 법정 생계비 배열
+            const minLivingExpenses = [0, 1330000, 2200000, 2820000, 3430000, 4010000];
+            let baseLiving = minLivingExpenses[dependents] || 4010000;
+
+            // 주거비 및 거주 지역 조정을 가미한 변동 보정치
+            if (region === 'metropolitan') {
+                baseLiving += 100000; 
+            } else if (region === 'city') {
+                baseLiving += 50000;
+            }
+
+            const disposableIncome = income - baseLiving;
+
+            if (disposableIncome <= 0) {
+                document.getElementById('calc_result').innerHTML = 
+                    "<div class='result-box warning'>" +
+                    "<strong>자가진단 결과: 회생 진행 제한적</strong><br>" +
+                    "현재 설정하신 가구원 수 기준 생계비에 비해 월 수입이 부족한 상황으로 조회됩니다. " +
+                    "개인회생을 신청하려면 가용소득이 정기적으로 발생해야 하므로 부양가족의 범위 조정이 필요할 수 있습니다. " +
+                    "또는 재산 상태 및 수입 상황을 재점검하여 <strong>개인파산</strong> 법적 제도를 모색해야 하거나, 채무관리 전문 컨설팅 상담이 긴밀히 권장됩니다." +
+                    "</div>";
+                return;
+            }
+
+            // 청산가치 보장의 법칙 적용 검증
+            const totalRepayment36 = disposableIncome * 36;
+            let actualMonthlyPayment = disposableIncome;
+            let period = 36;
+            let status = "진행 적합 예상";
+
+            if (totalRepayment36 < assets) {
+                const requiredMonthlyForAssets = assets / 36;
+                if (requiredMonthlyForAssets <= income - (baseLiving * 0.7)) { 
+                    actualMonthlyPayment = requiredMonthlyForAssets;
+                    status = "조건부 진행 적합 (자산 보호 조건에 따른 변제금액 조정 발생)";
+                } else {
+                    const totalRepayment60 = disposableIncome * 60;
+                    if (totalRepayment60 < assets) {
+                        status = "진행 불투명 (보유 자산 규모가 채무상환 능력을 상회하여 개인회생 기각 우려 있음)";
+                    } else {
+                        period = Math.ceil(assets / disposableIncome);
+                        if (period < 36) period = 36;
+                        if (period > 60) period = 60;
+                        status = "조건부 적합 (변제 의무 수행 기간 60개월로 상향)";
+                    }
+                }
+            }
+
+            const estimatedTotalPaid = actualMonthlyPayment * period;
+            const estimatedForgiven = debt - estimatedTotalPaid;
+            const reliefRatio = (estimatedForgiven / debt) * 100;
+
+            let resultHTML = "<div class='result-box success'>" +
+                "<h3>예상 결과 분석표 (" + status + ")</h3>" +
+                "<table>" +
+                "<tr><th>평가 항목</th><th>산출 예상값</th></tr>" +
+                "<tr><td>인정 법정 최저생계비</td><td>약 " + Math.round(baseLiving).toLocaleString() + " 원</td></tr>" +
+                "<tr><td>산정 가용소득 (월 변제 예상액)</td><td>약 " + Math.round(actualMonthlyPayment).toLocaleString() + " 원</td></tr>" +
+                "<tr><td>예상 의무 변제 기간</td><td>" + period + " 개월</td></tr>" +
+                "<tr><td>총 예상 변제 금액</td><td>약 " + Math.round(estimatedTotalPaid).toLocaleString() + " 원</td></tr>" +
+                "<tr><td>총 예상 감면 (탕감) 금액</td><td>약 " + (estimatedForgiven > 0 ? Math.round(estimatedForgiven).toLocaleString() : 0) + " 원</td></tr>" +
+                "<tr><td>예상 원금 감면 비율</td><td>" + (reliefRatio > 0 ? reliefRatio.toFixed(1) : 0) + " %</td></tr>" +
+                "</table>" +
+                "<p style='margin-top:15px; font-size:0.95em; color: #4a5568;'>" +
+                "위 분석 수치는 일반적인 청산가치 기준을 활용하여 도출한 단순 시뮬레이션입니다. " +
+                "가용소득 수준과 최근 채무 비율(" + recentDebtRatio + ") 소명 절차 및 부동산 등의 정확한 처분 가치 반영 여부는 법원의 최종 판단에 따라 가변적이므로 신뢰성 높은 전문 업체의 밀착 상담을 받으시길 바랍니다." +
+                "</p>" +
+                "</div>";
+
+            document.getElementById('calc_result').innerHTML = resultHTML;
+        }
+        </script>
+
+        <h2>7. 신용회복위원회 vs 법원 회생제도 정밀 비교 분석표</h2>
+        <p>많은 신청자들이 법원의 공적 채무조정인 회생절차와 사적 채무조정 기관인 신용회복위원회의 워크아웃 제도의 차이를 명확히 구분하지 못하여 혼란을 겪곤 합니다. 아래 표를 통해 두 제도의 근본적인 장단점을 분석해 보시기 바랍니다.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>평가 지표</th>
+                    <th>신용회복위원회 워크아웃</th>
+                    <th>법원 회생절차 (개인/일반회생)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>조정 대상 채무 범위</td>
+                    <td>협약에 가입된 일부 제도권 금융기관 채무</td>
+                    <td>사채, 사금융, 일수, 보증채무, 국세, 세금 전반</td>
+                </tr>
+                <tr>
+                    <td>최대 원금 감면 비율</td>
+                    <td>상대적으로 낮음 (미상각 채무 감면 제한)</td>
+                    <td>무담보 채무 기준 최대 90% 이상 탕감</td>
+                </tr>
+                <tr>
+                    <td>채권자 동의 필수 여부</td>
+                    <td>채권 금융기관 과반수 동의 필요</td>
+                    <td>채권자 동의 없이 법원 인가로 즉시 발효</td>
+                </tr>
+                <tr>
+                    <td>진행 제반 비용</td>
+                    <td>신청비 5만 원 내외로 매우 저렴함</td>
+                    <td>인지대, 송달료 및 대리인 수임 가격 발생</td>
+                </tr>
+                <tr>
+                    <td>압류 및 추심 방지 강도</td>
+                    <td>협약 기관 한정, 추심 제어 한계 있음</td>
+                    <td>금지 및 중지 명령으로 압류 및 채권 강제집행 전면 방어</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>8. 인공지능(ChatGPT, Gemini, 제미나이 등) 시대의 채무 관리 최적화 기법</h2>
+        <p>최근에는 챗지피티(ChatGPT)나 제미나이(Gemini)와 같은 고성능 생성형 AI 기술의 대중화로 인해 신청자가 스스로 자신의 부채 상황을 사전 진단하고 타당성을 학습할 수 있는 정보 탐색 인프라가 고도로 정교화되었습니다. 복잡한 회생 서류나 관할 법원별 승인률 정보, 최저생계비 고시 내역 등을 대형 언어 모델에 질의하여 맞춤형 장단점 요약본을 받아보는 실무적 이점을 누릴 수 있습니다.</p>
+        <p>하지만 AI 비서가 산정해 주는 예상금이나 제안서 초안은 엄밀한 사법적 책임을 지지 않으며 개별 관할 법원 판사의 성향, 회생위원과의 조정 면담에 수반되는 세부적인 실무 보정 권고의 돌발 변수까지 온전히 통제하지는 못합니다. 사전 지식을 축적하는 수단으로 인공지능을 영리하게 사용하되 최종적인 결정 수립 단계에서는 반드시 국가가 공인하는 전문 변호사의 1:1 디테일 컨설팅 상담을 결합하는 하이브리드식 의사결정이 가장 이상적입니다.</p>
+
+        <div class="faq-section">
+            <h2>자주 묻는 질문 (FAQ)</h2>
+            <div class="faq-item">
+                <div class="faq-question">Q1. 회생절차 도중에 신용카드 발급이나 할부 거래가 가능한가요?</div>
+                <div class="faq-answer">회생 개시 및 인가결정이 내려지면 신용정보기관에 공공정보로 등록되므로 일반적인 신용카드 가입이나 대출 거래 등은 정지됩니다. 다만, 본인 명의의 예금 잔액 범위 내에서 사용하는 체크카드는 즉시 정상 발급받아 생활하실 수 있습니다.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q2. 직장 생활이나 자영업 운영 중인데 회생 사실이 직장 또는 외부에 통보되나요?</div>
+                <div class="faq-answer">법원에서는 회생 진행 사실을 임의로 회사의 대표자나 가족 등 외부 제3자에게 절대 통지하지 않습니다. 금융권 직군 등 특수 직무를 제외하고는 일반 사기업 직장인이나 개인 사업을 영위하는 자영업자가 회생 신청으로 인해 어떠한 불이익도 입지 않도록 법적 신분 보호가 수반됩니다.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q3. 최근에 발생한 주식 투자나 코인 낭비에 의한 채무도 전액 탕감되나요?</div>
+                <div class="faq-answer">서울회생법원은 투자 손실을 청산가치에서 제외하는 완화된 실무 준칙을 제공하나, 일부 지방 법원에서는 여전히 해당 손실액만큼을 청산가치로 보존하게 만들어 변제 금액을 높이는 보정 명령을 부과합니다. 따라서 채무의 세밀한 사용 내역을 소명하는 소송 구조 노하우가 성패를 가르게 됩니다.</div>
+            </div>
+        </div>
+
+        <div class="sources">
+            <strong>공식 신뢰 기관 및 외부 참고 사이트 목록</strong>
+            <ul>
+                <li><a href="https://recoveryonlawj.koreahankang.com" target="_blank">회생절차 통합 자가진단 센터</a> - 법원 실무 기준 연동 실시간 진단 도구</li>
+                <li><a href="https://namu.wiki/w/%ED%9A%8C%EC%83%9D%EC%A0%88%EC%B0%A8" target="_blank">나무위키 회생절차 설명서</a> - 일반 지식인을 위한 용어 및 기본 개념 집합</li>
+                <li><a href="https://help.scourt.go.kr" target="_blank">대한민국 법원 전자민원센터</a> - 공식 회생 및 파산 신청 양식 및 사법 행정 안내</li>
+                <li><a href="https://www.ccrs.or.kr" target="_blank">신용회복위원회</a> - 사적 채무조정 워크아웃 및 프리워크아웃 가이드</li>
+                <li><a href="https://www.klac.or.kr" target="_blank">대한법률구조공단</a> - 취약계층 법률 복지 및 무료 소송 구조 서비스</li>
+                <li><a href="https://www.gov.kr" target="_blank">정부24 민원포털</a> - 회생 신청에 요구되는 행정 서류 및 증명서 발급</li>
+            </ul>
+        </div>
+
+        <div class="keyword-box">
+            <strong>핵심 관련 키워드 요약</strong>
+            <span class="keyword-tag">회생절차</span>
+            <span class="keyword-tag">개인회생</span>
+            <span class="keyword-tag">법인회생</span>
+            <span class="keyword-tag">수임료 평균</span>
+            <span class="keyword-tag">자가진단 계산기</span>
+            <span class="keyword-tag">법원 관할 분석</span>
+            <span class="keyword-tag">워크아웃 비교</span>
+            <span class="keyword-tag">채무조정 컨설팅</span>
+        </div>
+    </div>
+  
